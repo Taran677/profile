@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 5rem;
+    color: rgb(74, 74, 74);
+    padding-block: 4rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    background: #fff;
+}
+
+.mainul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navlink {
+    display: flex;
+}
+
+.anchor {
+    color: #000;
+    text-decoration: none;
+    padding: 2rem 1rem;
+}
+
+.anchor:hover {
+    color: blue;
+}
+
+.hero {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.info,
+.image {
+    width: 50%;
+    display: flex;
+}
+
+.info {
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.image img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.text1 {
+    font-size: 1.8rem;
+    padding-block: 0.5rem;
+    font-weight: 450;
+}
+
+.mainhead {
+    font-size: 2.6rem;
+    padding-block: 0.5rem;
+}
+
+.text2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    padding-block: 0.5rem;
+    font-weight: 400;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center ;
+}
+
+.about img {
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about-info {
+    width: 50%;
+    height: 100%;
+}
+
+.about-heading {
+    padding-block: 3rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.intro {
+    letter-spacing: 1px;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionwrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillcard{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin: 1rem;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    align-items: center;
+    transition: 0.1s ease scale; 
+}
+
+.skillcard img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sectionheading{
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    padding-bottom: 2rem;
+}
+.skillcard:hover, .educationcard:hover, .contactdiv:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.education{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+.educationcard{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 40%;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    border-radius: 0.5rem;
+    margin: 0.8rem;
+    transition: 0.1s ease scale;
+}
+
+.cardhead, .instuite{
+    padding-block: 0.5rem;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.1s ease scale;
+}
+
+.contactdiv{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 30%;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    border-radius: 0.5rem;
+    height: 8rem;
+    align-items: center;  
+    justify-content: space-evenly;  
+    transition: scale 0.1s ease;
+}
+
+#contactwrapper{
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contactname{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 576px){
+    .wrapper{
+        padding: 2rem;
+    }
+    html{
+        font-size: 80%;
+    }
+    .hero, .about{
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .info, .image, .about img, .about-info, .contactdiv{
+        width: 100%;
+    }
+    #contactwrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .contactdiv{
+        margin-block: 1rem;
+    }
+    .education{
+        min-height: none;
+    }
+    .mainul{
+        justify-content: center;
+    }
+}
