@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Roboto, serif;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    background: #ffffffe0;
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+}
+
+.anchornav {
+    display: flex;
+    padding: 2rem 1rem;
+}
+
+.anchornav:hover {
+    color: blue;
+}
+
+.anchor {
+    color: #000;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-inline: 5rem    ;
+    color: #3b3b3b;
+    padding-top: 4rem;
+}
+
+.container>div {
+    min-width: 50%;
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    flex-basis: 100%;
+    align-self: flex-start;
+    padding: 1rem;
+}
+
+.info1, .info2, .info3{
+    padding-block: 1rem;
+}
+.info1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.info2{
+    font-size: 2.6rem;
+}
+.info3{
+    font-size: 1.7rem;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+}
+
+.image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.aboutheading{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+    padding-top: 25vh;
+}
+#education
+{
+
+    flex-direction: column;
+   
+}
+.cardwrapper{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    transition: scale 0.1s ease;
+}
+.educard{
+    width: 45%;
+    margin: 1rem;
+}
+.cardinfo{
+    padding-block: 1rem;
+}
+.head{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.card:hover{
+    scale: 1.05;
+    cursor: pointer;
+}
+.containerhead{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.img{
+    max-width: 100%;
+}
+.skillcard{
+    max-width: 10rem;
+    align-items: center;
+
+}
+#skills, #contact{
+    flex-direction: column;
+}
+
+.contactCard{
+    min-width: 30%;
+    align-items: center ;
+    padding-top: 2rem;
+}
+@media screen and (max-width: 576px) {
+    .container{
+        flex-direction: column;
+        padding-inline:2rem;
+    }
+    html{
+        font-size: 80%;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+}
