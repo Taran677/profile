@@ -1,248 +1,215 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Roboto, serif;
+    font-family: "Roboto", serif;
+    scroll-behavior: smooth;
 }
 
-html,
-body {
-    width: 100%;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-inline: 5rem;
-    color: rgb(74, 74, 74);
-    padding-block: 4rem;
-}
 
 .navbar {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    /* position: fixed; */
-    background: #fff;
-}
-
-.mainul {
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    width: 100%;
-}
-
-.navlink {
-    display: flex;
 }
 
 .anchor {
+    padding: 2rem 1rem;
     color: #000;
     text-decoration: none;
-    padding: 2rem 1rem;
 }
 
 .anchor:hover {
     color: blue;
 }
 
+.wrapper-main {
+    padding-inline: 5rem;
+    color: #4f4f4f;
+}
+
 .hero {
     display: flex;
     min-height: 100vh;
-    min-height: 100vh;
-    align-items: center;
 }
 
 .info,
-.image {
+img {
     width: 50%;
-    display: flex;
 }
 
 .info {
-    flex-direction: column;
-    align-self: flex-start;
+    padding-top: 7rem;
 }
 
-.image img {
-    max-width: 100%;
-    object-fit: contain;
+.first-head,
+.main-head,
+.second-head {
+    padding-block: 0.7rem;
 }
 
-.text1 {
+.first-head {
     font-size: 1.8rem;
-    padding-block: 0.5rem;
-    font-weight: 450;
 }
 
-.mainhead {
+.main-head {
     font-size: 2.6rem;
-    padding-block: 0.5rem;
 }
 
-.text2 {
-    font-size: 1.8rem;
-    letter-spacing: 0.4rem;
-    padding-block: 0.5rem;
-    font-weight: 400;
+.second-head {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
 }
 
-.about {
+#about {
     display: flex;
-    flex-direction: row;
-    width: 100%;
     min-height: 100vh;
-    align-items: center ;
+    gap: 2rem;
 }
 
-.about img {
-    width: 50%;
-    height: 100%;
+img {
     object-fit: contain;
 }
 
-.about-info {
-    width: 50%;
-    height: 100%;
-}
-
-.about-heading {
-    padding-block: 3rem;
-    font-size: 2rem;
-    letter-spacing: 2px;
-}
-
-.intro {
-    letter-spacing: 1px;
-}
-
-.skills{
+#info {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;    
-    align-items: center;
-    justify-content: center;
+    gap: 2rem
 }
 
-.sectionwrapper{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.skillcard{
+.information {
     display: flex;
     flex-direction: column;
-    width: 10rem;
-    margin: 1rem;
-    box-shadow: 0 0.5rem 1rem #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    align-items: center;
-    transition: 0.1s ease scale; 
 }
 
-.skillcard img{
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-.sectionheading{
+.heading {
     text-align: center;
     font-size: 2rem;
-    width: 100%;
-    padding-bottom: 2rem;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.skillcard:hover, .educationcard:hover, .contactdiv:hover{
+
+.education {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.edu-card {
+    width: 40%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    border-radius: 0.5rem;
     cursor: pointer;
+    transition: scale 0.2s ease;
+}
+
+.edu-card:hover,
+.skill-card:hover,
+.contact-card:hover {
     scale: 1.05;
 }
 
-.education{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-    justify-content: center;
-}
-.educationcard{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 40%;
-    box-shadow: 0 0.5rem 1rem #ccc;
-    border-radius: 0.5rem;
-    margin: 0.8rem;
-    transition: 0.1s ease scale;
-}
-
-.cardhead, .instuite{
-    padding-block: 0.5rem;
-}
-
-.contacts{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: 0.1s ease scale;
-}
-
-.contactdiv{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 30%;
-    box-shadow: 0 0.5rem 1rem #ccc;
-    border-radius: 0.5rem;
-    height: 8rem;
-    align-items: center;  
-    justify-content: space-evenly;  
-    transition: scale 0.1s ease;
-}
-
-#contactwrapper{
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.contactname{
+.edu-name {
     font-size: 1.3rem;
-    font-weight: 500;
 }
 
-@media screen and (max-width: 576px){
-    .wrapper{
-        padding: 2rem;
-    }
-    html{
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-card {
+    gap: 2rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    height: 12rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s ease scale;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    justify-content: space-around;
+    min-height: 50vh;
+    gap: 1rem;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    box-shadow: 0 0.5rem 1rem #ccc;
+    align-items: center;
+    transition: 0.2s ease scale;
+    height: 8rem;
+    justify-content: center;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width:576px) {
+    html {
         font-size: 80%;
     }
-    .hero, .about{
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-    .info, .image, .about img, .about-info, .contactdiv{
-        width: 100%;
-    }
-    #contactwrapper{
-        flex-direction: column;
-        flex-wrap: wrap;
+
+    .wrapper-main {
+        padding-inline: 2rem;
+        padding-block-end: 5rem;
     }
 
-    .contactdiv{
-        margin-block: 1rem;
-    }
-    .education{
-        min-height: none;
-    }
-    .mainul{
+    .navbar {
         justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .hero>* {
+        width: 100%;
+    }
+
+    .info>*,
+    #about>* {
+        text-align: center;
+        width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .information {
+        text-align: justify;
+    }
+
+    .edu-card {
+        width: 100%;
+    }
+
+    .skills {
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: 40%;
     }
 }
